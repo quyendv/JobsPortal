@@ -10,6 +10,10 @@
         align-items: center;
         justify-content: center;
 
+        &:hover {
+            color: #000;
+        }
+
         &.nav-active {
             color: var(--black);
             border-bottom: 2px solid #000;

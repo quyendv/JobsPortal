@@ -29,7 +29,7 @@ body {
     line-height: 1.5;
     text-rendering: optimizeSpeed;
     color: var(--text-color);
-    // background-color: #f3f2ee;
+    background-color: #f3f2ee;
 }
 
 button,
@@ -42,4 +42,50 @@ input,
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+
+.separate-horizontal-both {
+    margin: 10px 0;
+    height: 1px;
+    background-color: rgba($color: #000000, $alpha: 0.15);
+}
+
+.separate-vertical-both {
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+.separate-vertical-left {
+    border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+.separate-vertical-right {
+    border-right: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+.separate-horizontal {
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+}
+
+.spacer-horizontal {
+    height: 4px;
+    padding: 0 !important;
+}
+
+.or {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 32px 0 16px;
+    background-color: #b5bdc4;
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6rem;
+        text-align: center;
+        background-color: var(--white);
+    }
 }

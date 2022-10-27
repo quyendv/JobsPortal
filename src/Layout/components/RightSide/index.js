@@ -3,10 +3,10 @@ import styles from './RightSide.module.scss';
 
 const cx = classNames.bind(styles);
 
-function RightSide() {
+function RightSide({ children, className }) {
     return (
-        <div className={cx('wrapper')}>
-            <h1>RightSide</h1>
+        <div className={cx('wrapper', className)}>
+            {children}
         </div>
     );
 }
