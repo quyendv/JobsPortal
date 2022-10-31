@@ -1,0 +1,13 @@
+.wrapper {
+    width: var(--default-layout-width);
+    height: calc(100vh - 110px); // fit height window remain
+    display: flex;
+}
+.jobs-list {
+    overflow-y: scroll;
+}
+.job-item-info-detail {
+    flex: 1;
+    height: 100%;
+    background-color: yellow;
+}

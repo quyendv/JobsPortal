@@ -12,7 +12,7 @@ import styles from './Header.module.scss';
 const cx = classNames.bind(styles);
 
 function Header() {
-    const currentUser = false; // isLogin, sau sửa thành object lưu thông tin người dùng
+    const currentUser = true; // isLogin, sau sửa thành object lưu thông tin người dùng
 
     return (
         <div className={cx('wrapper', { guest: currentUser === false })}>

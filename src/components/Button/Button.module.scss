@@ -59,6 +59,7 @@ $hover-outline: #0a66c2;
 }
 
 .text {
+    // background-color: transparent;
     &:hover {
         text-decoration: underline;
     }
@@ -82,7 +83,7 @@ $hover-outline: #0a66c2;
     text-align: center;
 }
 
-.icon + .title,
-.title + .icon {
-    margin-left: 8px;
-}
+// .icon + .title,
+// .title + .icon {
+//     margin-left: 8px;
+// }

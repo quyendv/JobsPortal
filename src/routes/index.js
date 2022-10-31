@@ -1,5 +1,6 @@
 // Layouts
 import { OnlyBodyLayout, ProfileLayout } from '~/Layout';
+import JobsLayout from '~/Layout/JobsLayout';
 
 // Pages
 import Home from '~/pages/Home';
@@ -17,6 +18,7 @@ const publicRoutes = [
     {
         path: '/jobs',
         component: Jobs,
+        layout: JobsLayout,
     },
 
     {

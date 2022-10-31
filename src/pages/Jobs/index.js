@@ -1,5 +1,13 @@
+import JobsList from '~/Layout/JobsLayout/JobsList';
+import Toolbar from '~/Layout/JobsLayout/Toolbar';
+
 function Jobs() {
-    return <h1>Jobs Page</h1>;
+    return (
+        <>
+            <Toolbar />
+            <JobsList />
+        </>
+    );
 }
 
 export default Jobs;
