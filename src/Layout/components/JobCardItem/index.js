@@ -1,7 +1,7 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
-import { InsightIcon } from '../Icons';
-import Image from '../Image';
+import { InsightIcon } from '../../../components/Icons';
+import Image from '../../../components/Image';
 import styles from './JobCardItem.module.scss';
 
 const cx = classNames.bind(styles);

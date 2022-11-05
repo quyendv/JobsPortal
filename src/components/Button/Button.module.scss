@@ -20,7 +20,7 @@ $hover-outline: #0a66c2;
         margin-left: 8px;
     }
 
-    // disable: select none, poiter none, decrease opacity, delete props.on...
+    // disable: select none, pointer none, decrease opacity, delete props.on...
     &.disabled {
         pointer-events: none;
         opacity: 0.5;

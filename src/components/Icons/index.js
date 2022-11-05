@@ -102,15 +102,62 @@ export const InsightIcon = ({ width = '2.4rem', height = '2.4rem', className }) 
     </svg>
 );
 
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    data-supported-dps="24x24"
-    fill="currentColor"
-    class="mercado-match"
-    width="24"
-    height="24"
-    focusable="false"
->
-    <path d="M12 20a8 8 0 010-16 7.91 7.91 0 014.9 1.69l-1.43 1.42a6 6 0 101.42 1.42l3.82-3.82a1 1 0 000-1.41A1 1 0 0020 3a1 1 0 00-.7.29l-1 1A10 10 0 1022 12h-2a8 8 0 01-8 8zm5-8a5 5 0 11-5-5 4.93 4.93 0 012.76.82l-2.24 2.24A2.24 2.24 0 0012 10a2 2 0 102 2 2.24 2.24 0 00-.07-.51l2.24-2.24A5 5 0 0117 12z"></path>
-</svg>;
+export const JobIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        data-supported-dps="24x24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z"></path>
+    </svg>
+);
+
+export const CompanyIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        data-supported-dps="24x24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M4 2v20h16V2zm14 18h-4v-2h-4v2H6V4h12zm-7-8H8v-2h3zm0 4H8v-2h3zm5-4h-3v-2h3zm-5-4H8V6h3zm5 0h-3V6h3zm0 8h-3v-2h3z"></path>
+    </svg>
+);
+
+export const LightBulbIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        data-supported-dps="24x24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M10 20h4v.1a1.9 1.9 0 01-1.9 1.9h-.2a1.9 1.9 0 01-1.9-1.9zm4.68-14.47A1 1 0 0016 5l.76-1.85a1 1 0 00-.54-1.3 1 1 0 00-1.31.54l-.76 1.85a1 1 0 00.53 1.29zm5.09 4.33l1.85-.76a1 1 0 00.54-1.31 1 1 0 00-1.3-.54L19 8a1 1 0 00-.54 1.31 1 1 0 001.3.55zM4.23 14.14l-1.85.76a1 1 0 00-.54 1.31 1 1 0 001.3.54L5 16a1 1 0 00.54-1.31 1 1 0 00-1.3-.55zm17.39.76l-1.85-.76A1 1 0 0019 16l1.85.76a1 1 0 00.78-1.86zM5 8l-1.86-.75a1 1 0 00-1.3.54 1 1 0 00.54 1.31l1.85.76A1 1 0 005 8zm3-3a1 1 0 001.31.54 1 1 0 00.54-1.3L9.1 2.38a1 1 0 00-1.31-.54 1 1 0 00-.54 1.3zm9 6.91V12a5.48 5.48 0 01-1.61 3.88l-.07.08a3.94 3.94 0 00-1.08 1.94L14 19h-4l-.24-1.08A4 4 0 008.68 16l-.07-.07A5.51 5.51 0 017 12v-.1A4.9 4.9 0 0111.9 7h.2a4.9 4.9 0 014.9 4.9zm-2 0A2.9 2.9 0 0012.11 9h-.21A2.9 2.9 0 009 11.9v.1a3.47 3.47 0 001 2.47l.08.08a5.92 5.92 0 011.5 2.45h.84a6 6 0 011.48-2.44l.08-.07A3.48 3.48 0 0015 12z"></path>
+    </svg>
+);
+
+export const CheckListIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        data-supported-dps="24x24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        focusable="false"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path d="M22 3v2H11V3zM11 13h11v-2H11zm0 8h11v-2H11zM4.85 4L3.34 2.51 2 3.85 5.15 7l4.6-7H7.48zm0 8l-1.51-1.49L2 11.85 5.15 15l4.6-7H7.48zm0 8l-1.51-1.49L2 19.85 5.15 23l4.6-7H7.48z"></path>
+    </svg>
+);

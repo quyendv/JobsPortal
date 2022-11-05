@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import Button from '~/components/Button';
 import styles from './Toolbar.module.scss';
+import HeadlessTippy from '@tippyjs/react/headless';
 
 const cx = classNames.bind(styles);
 
@@ -12,9 +13,11 @@ function Toolbar() {
     return (
         <div className={cx('wrapper', 'separate-horizontal')}>
             <div className={cx('inner')}>
-                <Button className={cx('btn', 'active')} rounded outline rightIcon={rightIcon}>
-                    Jobs
-                </Button>
+                <HeadlessTippy>
+                    <Button className={cx('btn', 'active')} rounded outline rightIcon={rightIcon}>
+                        Jobs
+                    </Button>
+                </HeadlessTippy>
                 <div className={cx('search-types', 'separate-vertical-both')}>
                     <Button className={cx('btn')} rounded outline rightIcon={rightIcon}>
                         Date Posted
