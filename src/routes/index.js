@@ -1,7 +1,6 @@
 // Layouts
 import routesConfig from '~/config/routes';
-import { OnlyBodyLayout, PostJobLayout, ProfileLayout } from '~/Layout';
-import JobsLayout from '~/Layout/JobsLayout';
+import { OnlyBodyLayout, ProfileLayout } from '~/layouts';
 
 // Pages
 import Home from '~/pages/Home';
@@ -13,6 +12,7 @@ import Signup from '~/pages/Signup';
 
 const publicRoutes = [
     // Layout: DefaultLayout if undefined / route.layout if layout=truthy / Fragment if null (not Layout)
+    // TODO: cập nhật layout
     {
         path: routesConfig.home, // /feed
         component: Home,
@@ -20,7 +20,6 @@ const publicRoutes = [
     {
         path: routesConfig.jobs,
         component: Jobs,
-        layout: JobsLayout,
     },
 
     {
@@ -41,7 +40,6 @@ const publicRoutes = [
     {
         path: routesConfig.postJob,
         component: PostJob,
-        layout: PostJobLayout,
     },
 ];
 

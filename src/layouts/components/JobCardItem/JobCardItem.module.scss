@@ -1,0 +1,98 @@
+.job-card-item {
+    position: relative;
+    width: 503px;
+    height: 145px;
+    padding: 8px;
+    background-color: var(--white);
+    &.active {
+        background-color: #e2f0fd;
+    }
+    & + .job-card-item {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 86%;
+            height: 1px;
+            background-color: rgba($color: #000, $alpha: 0.1);
+        }
+    }
+}
+
+.job-card-item-header {
+    display: flex;
+    cursor: pointer;
+    .logo-company {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        margin-right: 4px;
+    }
+    .job-card-item-info {
+        padding-left: 8px;
+        display: flex;
+        flex-direction: column;
+        .job-card-item-title {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            color: #0a66c2;
+        }
+        .job-card-item-company,
+        .job-card-item-address {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+        .job-card-item-company {
+            color: rgba($color: #000, $alpha: 0.9);
+        }
+        .job-card-item-address {
+            color: rgba($color: #000, $alpha: 0.6);
+        }
+    }
+}
+
+.job-card-item-insight {
+    margin-left: 64px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    .insight-icon {
+        color: #057542;
+    }
+    span {
+        margin-left: 4px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: rgba($color: #000, $alpha: 0.6);
+    }
+}
+
+.job-card-item-footer {
+    padding-top: 8px;
+    margin-left: 64px;
+    font-size: 12px;
+    line-height: 16px;
+    .date-time {
+        font-weight: 400;
+        color: rgba($color: #000, $alpha: 0.6);
+    }
+
+    .applications {
+        font-weight: 600;
+        color: #057642;
+        &:before {
+            content: '';
+            margin: 0 4px 2px;
+            display: inline-block;
+            background-color: currentColor;
+            width: 2px;
+            height: 2px;
+        }
+    }
+}
+
+

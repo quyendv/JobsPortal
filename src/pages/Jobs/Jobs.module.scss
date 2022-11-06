@@ -1,4 +1,10 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
 .container {
+    margin: 58px auto 0;
     width: var(--default-layout-width);
     height: calc(100vh - 110px); // fit height window remain
     display: flex;
@@ -11,4 +17,14 @@
     flex: 1;
     height: 100%;
     padding: 0 12px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #f3f2ee;
+        border-radius: 5px;
+    }
 }
