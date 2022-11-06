@@ -66,7 +66,7 @@ const navGuest = [
     },
 ];
 
-function Navigation({ isLogin = false }) {
+function Navigation({isLogin = false }) {
     const navList = isLogin ? navLogin : navGuest;
     const [navActive, setNavActive] = useState(navList === navLogin ? 0 : null);
 

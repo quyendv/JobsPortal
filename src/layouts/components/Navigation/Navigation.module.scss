@@ -1,4 +1,6 @@
 .nav-list {
+    flex: 1;
+    justify-content: end;
     display: flex;
 
     .nav-item {

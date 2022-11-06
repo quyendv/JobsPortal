@@ -18,10 +18,11 @@ function Header() {
         <div className={cx('wrapper', { guest: currentUser === false })}>
             <div className={cx('inner')}>
                 {/* Logo */}
-                <img className={cx('logo')} src={currentUser ? images.logo : images.logoFull} alt="Linkedin" />
+                {/* <img className={cx('logo')} src={currentUser ? images.logo : images.logoFull} alt="Linkedin" /> */}
+                <img className={cx('logo')} src={images.logoJobsPortal} alt="JobsPortal" />
 
                 {/* Search */}
-                {currentUser ? <Search /> : <div className={cx('flex1')}></div>}
+                {/* {currentUser ? <Search /> : <div className={cx('flex1')}></div>} */}
 
                 {/* Navigation */}
                 <Navigation isLogin={currentUser} />
@@ -31,11 +32,11 @@ function Header() {
                     {currentUser ? (
                         /* isLogin: user infor */
                         <UserMenu>
-                            <div className={cx('user', 'separate-vertical-both')}>
+                            <div className={cx('user', 'separate-vertical-left')}>
                                 <Image
                                     className={cx('user-avatar')}
                                     src="https://media-exp1.licdn.com/dms/image/D4E03AQEn2uh6GOKBZA/profile-displayphoto-shrink_100_100/0/1666546258083?e=1672272000&v=beta&t=XUIyb1YN6H1tbfBy_yLMAwZkgMUc2umKn0fbHyTGCoQ"
-                                    alt="Fullname..."
+                                    alt="FullName..."
                                     fallback="https://lh3.googleusercontent.com/a/ALm5wu0xPapznyPPczdkQOWkw7LE6b2PQKWJnX7soGi52w=s96-c-rg-br100"
                                 />
                                 <div>

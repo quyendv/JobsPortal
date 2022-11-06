@@ -9,7 +9,7 @@ function PostJob() {
             <div className={cx('page-title')}>
                 <span>Post Job</span>
             </div>
-            <form action="">
+            <form className='form' action="">
                 <h3 className="text-xl font-semibold">Job Information</h3>
 
                 <div className={cx('row', 'form-row')}>

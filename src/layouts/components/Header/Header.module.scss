@@ -1,6 +1,7 @@
 .wrapper {
     width: 100%;
-    height: var(--default-layout-header-height, 53px);
+    // height: var(--default-layout-header-height, 53px);
+    height: var(80px, 53px);
     padding: 0 var(--default-layout-horizontal-spacer);
     background-color: var(--white);
     &.guest {

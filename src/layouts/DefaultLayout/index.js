@@ -6,7 +6,6 @@ const cx = classNames.bind(styles);
 
 /**
  * Layout include: Header, Container, Footer
- * // TODO: Layout for Home(/), Jobs(/jobs), ...
  */
 function DefaultLayout({ children }) {
     return (

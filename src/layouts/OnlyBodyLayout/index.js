@@ -9,7 +9,7 @@ function OnlyBodyLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             {/* Logo */}
-            <img src={images.logoFull} alt="" />
+            <img src={images.logoJobsPortal} alt="" />
 
             {/* Container */}
             <div className={cx('container')}>{children}</div>
