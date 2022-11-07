@@ -6,7 +6,6 @@ import styles from './Signup.module.scss';
 
 const cx = classNames.bind(styles);
 
-// TODO: Signup 2 tab Candidate vs Employer
 
 function Signup() {
     const [formType, setFormType] = useState('candidate');

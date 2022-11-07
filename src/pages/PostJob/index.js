@@ -9,10 +9,10 @@ function PostJob() {
             <div className={cx('page-title')}>
                 <span>Post Job</span>
             </div>
-            <form className='form' action="">
+            <form className={cx('form')} action="">
                 <h3 className="text-xl font-semibold">Job Information</h3>
 
-                <div className={cx('row', 'form-row')}>
+                <div className={cx('row')}>
                     <div className={cx('col l-12', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Job Title
@@ -21,7 +21,7 @@ function PostJob() {
                     </div>
                 </div>
 
-                <div className={cx('row', 'form-row')}>
+                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Company
@@ -36,7 +36,22 @@ function PostJob() {
                     </div>
                 </div>
 
-                <div className={cx('row', 'form-row')}>
+                <div className={cx('row')}>
+                    <div className={cx('col l-6', 'form-group')}>
+                        <label htmlFor="" className={cx('form-label')}>
+                            Email
+                        </label>
+                        <input className={cx('form-control', 'email')} type="text" placeholder="Email" />
+                    </div>
+                    <div className={cx('col l-6', 'form-group')}>
+                        <label htmlFor="" className={cx('form-label')}>
+                            Phone
+                        </label>
+                        <input className={cx('form-control', 'phone')} type="text" placeholder="Phone Number" />
+                    </div>
+                </div>
+
+                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Workplace Type
@@ -62,7 +77,7 @@ function PostJob() {
                     </div>
                 </div>
 
-                <div className={cx('row', 'form-row')}>
+                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Experience Level
@@ -88,12 +103,39 @@ function PostJob() {
                     </div>
                 </div>
 
-                <div className={cx('row', 'form-row')}>
+                <div className={cx('row')}>
+                    <div className={cx('col l-6', 'form-group')}>
+                        <label htmlFor="" className={cx('form-label')}>
+                            Requirements
+                        </label>
+                        <textarea
+                            className={cx('form-control', 'requirements')}
+                            // cols="30"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                    <div className={cx('col l-6', 'form-group')}>
+                        <label htmlFor="" className={cx('form-label')}>
+                            Benefits
+                        </label>
+                        <textarea
+                            className={cx('form-control', 'benefits')}
+                            // cols="30"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div className={cx('row')}>
                     <div className={cx('col l-12', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
-                            Job Details
+                            Job Descriptions
                         </label>
-                        <textarea className={cx('form-control', 'job-details')} cols="30" rows="10"></textarea>
+                        <textarea
+                            className={cx('form-control', 'job-descriptions')}
+                            // cols="30"
+                            rows="8"
+                        ></textarea>
                     </div>
                 </div>
 

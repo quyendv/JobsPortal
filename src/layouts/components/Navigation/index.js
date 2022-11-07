@@ -9,16 +9,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import routesConfig from '~/config/routes';
 import styles from './Navigation.module.scss';
 
 const cx = classNames.bind(styles);
 
+// TODO: Sửa nốt
 const navLogin = [
     {
         title: 'Home',
-        to: '/',
+        to: routesConfig.home,
         icon: faHouseChimney,
     },
     {
@@ -28,7 +29,7 @@ const navLogin = [
     },
     {
         title: 'Jobs',
-        to: '/jobs',
+        to: routesConfig.jobs,
         icon: faBriefcase,
     },
     {
@@ -61,31 +62,26 @@ const navGuest = [
     },
     {
         title: 'Jobs',
-        to: '/jobs',
+        to: routesConfig.jobs,
         icon: faBriefcase,
     },
 ];
 
-function Navigation({isLogin = false }) {
+function Navigation({ isLogin = false }) {
     const navList = isLogin ? navLogin : navGuest;
-    const [navActive, setNavActive] = useState(navList === navLogin ? 0 : null);
 
     return (
         <div className={cx('nav-list')}>
             {navList.map((navItem, index) => (
-                <Link
+                <NavLink
                     key={index}
-                    className={cx('nav-item', {
-                        'nav-active': navActive === index,
-                    })}
+                    className={(nav) => cx('nav-item', { 'nav-active': nav.isActive })}
                     to={navItem.to}
-                    onClick={() => {
-                        if (navActive !== null) setNavActive(index);
-                    }}
+                    end
                 >
                     <FontAwesomeIcon className={cx('nav-icon')} icon={navItem.icon} />
                     <span>{navItem.title}</span>
-                </Link>
+                </NavLink>
             ))}
         </div>
     );

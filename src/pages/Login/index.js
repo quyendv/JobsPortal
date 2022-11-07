@@ -6,8 +6,6 @@ import styles from './Login.module.scss';
 
 const cx = classNames.bind(styles);
 
-// TODO: lỗi nút login với icon
-
 function Login() {
     return (
         <div className={cx('wrapper')}>

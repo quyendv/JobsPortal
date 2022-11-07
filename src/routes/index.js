@@ -12,7 +12,6 @@ import Signup from '~/pages/Signup';
 
 const publicRoutes = [
     // Layout: DefaultLayout if undefined / route.layout if layout=truthy / Fragment if null (not Layout)
-    // TODO: cập nhật layout
     {
         path: routesConfig.home, // /feed
         component: Home,
