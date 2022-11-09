@@ -10,12 +10,13 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { NavLink } from 'react-router-dom';
+import { HomeIcon } from '~/components/Icons';
 import routesConfig from '~/config/routes';
 import styles from './Navigation.module.scss';
 
 const cx = classNames.bind(styles);
 
-// TODO: Sửa nốt
+// TODO: Thêm disabled, sửa notification sau
 const navLogin = [
     {
         title: 'Home',
@@ -24,8 +25,9 @@ const navLogin = [
     },
     {
         title: 'My Network',
-        to: '/mynetwork',
+        to: routesConfig.myNetwork,
         icon: faPeopleGroup,
+        disabled: true,
     },
     {
         title: 'Jobs',
@@ -34,31 +36,36 @@ const navLogin = [
     },
     {
         title: 'Messaging',
-        to: '/messaging',
+        to: routesConfig.message,
         icon: faCommentDots,
+        disabled: true,
     },
     {
         title: 'Notifications',
-        to: '/notifications',
+        to: routesConfig.notifications,
         icon: faBell,
+        disabled: true,
     },
 ];
 
 const navGuest = [
     {
         title: 'Discover',
-        to: '/discover',
+        to: routesConfig.discovery,
         icon: faWpexplorer,
+        disabled: true,
     },
     {
         title: 'People',
-        to: '/people',
+        to: routesConfig.people,
         icon: faPeopleGroup,
+        disabled: true,
     },
     {
         title: 'Learning',
-        to: '/learning',
+        to: routesConfig.learning,
         icon: faChalkboardUser,
+        disabled: true,
     },
     {
         title: 'Jobs',
@@ -75,11 +82,12 @@ function Navigation({ isLogin = false }) {
             {navList.map((navItem, index) => (
                 <NavLink
                     key={index}
-                    className={(nav) => cx('nav-item', { 'nav-active': nav.isActive })}
+                    className={(nav) => cx('nav-item', { 'nav-active': nav.isActive, disabled: navItem.disabled })}
                     to={navItem.to}
                     end
                 >
                     <FontAwesomeIcon className={cx('nav-icon')} icon={navItem.icon} />
+                    {/* <HomeIcon className={cx('nav-icon')}/> */}
                     <span>{navItem.title}</span>
                 </NavLink>
             ))}

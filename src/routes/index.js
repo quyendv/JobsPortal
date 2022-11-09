@@ -1,6 +1,7 @@
 // Layouts
 import routesConfig from '~/config/routes';
 import { OnlyBodyLayout, ProfileLayout } from '~/layouts';
+import EditProfile from '~/pages/EditProfile';
 
 // Pages
 import Home from '~/pages/Home';
@@ -39,6 +40,10 @@ const publicRoutes = [
     {
         path: routesConfig.postJob,
         component: PostJob,
+    },
+    {
+        path: routesConfig.edit,
+        component: EditProfile,
     },
 ];
 

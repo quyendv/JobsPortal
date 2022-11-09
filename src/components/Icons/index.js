@@ -1,4 +1,4 @@
-export const SearchIcon = ({ width = '1.6rem', height = '1.6rem', className }) => (
+export const SearchIcon = ({ width = '16px', height = '16px', className }) => (
     <svg
         className={className}
         width={width}
@@ -13,7 +13,7 @@ export const SearchIcon = ({ width = '1.6rem', height = '1.6rem', className }) =
     </svg>
 );
 
-export const DiscoverIcon = ({ width = '2rem', height = '2rem', className }) => (
+export const DiscoverIcon = ({ width = '20px', height = '20px', className }) => (
     <svg
         className={className}
         width={width}
@@ -31,7 +31,7 @@ export const DiscoverIcon = ({ width = '2rem', height = '2rem', className }) => 
     </svg>
 );
 
-export const GoogleIcon = ({ width = '2.2rem', height = '2.4rem', className }) => (
+export const GoogleIcon = ({ width = '22px', height = '24px', className }) => (
     <svg
         className={className}
         width={width}
@@ -69,7 +69,7 @@ export const GoogleIcon = ({ width = '2.2rem', height = '2.4rem', className }) =
     </svg>
 );
 
-export const AppleIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const AppleIcon = ({ width = '24px', height = '24px', className }) => (
     <svg
         className={className}
         width={width}
@@ -87,7 +87,7 @@ export const AppleIcon = ({ width = '2.4rem', height = '2.4rem', className }) =>
     </svg>
 );
 
-export const InsightIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const InsightIcon = ({ width = '24px', height = '24px', className }) => (
     <svg
         className={className}
         width={width}
@@ -102,7 +102,7 @@ export const InsightIcon = ({ width = '2.4rem', height = '2.4rem', className }) 
     </svg>
 );
 
-export const JobIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const JobIcon = ({ width = '24px', height = '24px', className }) => (
     <svg
         className={className}
         width={width}
@@ -117,7 +117,7 @@ export const JobIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
     </svg>
 );
 
-export const CompanyIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const CompanyIcon = ({ width = '24px', height = '24px', className }) => (
     <svg
         className={className}
         width={width}
@@ -132,7 +132,7 @@ export const CompanyIcon = ({ width = '2.4rem', height = '2.4rem', className }) 
     </svg>
 );
 
-export const LightBulbIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const LightBulbIcon = ({ width = '24px', height = '24px', className }) => (
     <svg
         className={className}
         width={width}
@@ -147,7 +147,7 @@ export const LightBulbIcon = ({ width = '2.4rem', height = '2.4rem', className }
     </svg>
 );
 
-export const CheckListIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const CheckListIcon = ({ width = '24px', height = '24px', className }) => (
     <svg
         className={className}
         width={width}
@@ -161,3 +161,18 @@ export const CheckListIcon = ({ width = '2.4rem', height = '2.4rem', className }
         <path d="M22 3v2H11V3zM11 13h11v-2H11zm0 8h11v-2H11zM4.85 4L3.34 2.51 2 3.85 5.15 7l4.6-7H7.48zm0 8l-1.51-1.49L2 11.85 5.15 15l4.6-7H7.48zm0 8l-1.51-1.49L2 19.85 5.15 23l4.6-7H7.48z"></path>
     </svg>
 );
+
+// export const HomeIcon = ({ width = '24px', height = '24px', className }) => (
+//     <svg
+//         className={className}
+//         width={width}
+//         height={height}
+//         dataSupportedDps="24x24"
+//         viewBox="0 0 24 24"
+//         fill="currentColor"
+//         focusable="false"
+//         xmlns="http://www.w3.org/2000/svg"
+//     >
+//         <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7z"></path>
+//     </svg>
+// );

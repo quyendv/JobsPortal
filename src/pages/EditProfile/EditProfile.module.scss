@@ -1,0 +1,123 @@
+.wrapper {
+    width: 100%;
+    margin-top: 5px;
+
+    .page-title {
+        height: 190px;
+        position: relative;
+        background: url('https://ocsolutions.co.in/html/jobportal/new/images/categories/banner.png') no-repeat top /
+            cover;
+        > span {
+            position: absolute;
+            font-size: 40px;
+            font-weight: 600;
+            color: #fff;
+            top: 50%;
+            left: 15%;
+            transform: translateY(-50%);
+        }
+    }
+    .container {
+        display: flex;
+    }
+}
+
+// Container
+.left-side {
+    margin: auto;
+    margin-top: 400px;
+    margin-right: -24px;
+    .action-link {
+        display: flex;
+        justify-content: flex-start;
+        width: 310px;
+        padding: 16px;
+        font-size: 18px;
+        font-weight: 400;
+        background-color: white;
+        border: 1px solid #333;
+        transition: all ease .3s;
+        & + .action-link {
+            margin-left: 0;
+            margin-top: 12px;
+        }
+        &:hover {
+            background-color: #ff4153;
+            color: white;
+        }
+    }
+}
+
+.form {
+    width: 750px;
+    padding: 25px 30px;
+    margin: 50px auto;
+    margin-right: 150px;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    position: relative;
+    .avatar-block {
+        position: absolute;
+        top: 0;
+        left: -60%;
+        .avatar-file {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .avatar-image {
+            display: inline-block;
+            width: 310px;
+            height: 310px;
+            object-fit: cover;
+            border-radius: 50px;
+        }
+        &::after {
+            content: 'Change Photo';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            padding: 8px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            color: white;
+            background-color: #101844b5;
+        }
+    }
+}
+
+.form-group {
+    margin-top: 12px;
+    color: #0000009c;
+
+    .form-label {
+        color: #555;
+        font-size: 16px;
+        padding-left: 4px;
+        // &.required {
+        //     &::after {
+        //         content: '*';
+        //         padding-left: 2px;
+        //         display: inline-block;
+        //         color: red;
+        //     }
+        // }
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px 13px;
+        margin: 1px;
+        border: 1px solid #ccc;
+        &:focus {
+            box-shadow: 0 0 3px 1px #90cdda;
+        }
+        transition: box-shadow linear 0.3s;
+    }
+}

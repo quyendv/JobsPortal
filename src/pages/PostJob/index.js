@@ -17,46 +17,52 @@ function PostJob() {
                         <label htmlFor="" className={cx('form-label')}>
                             Job Title
                         </label>
-                        <input className={cx('form-control', 'job-title')} type="text" placeholder="Jobs Title" />
+                        <input
+                            className={cx('form-control', 'job-title')}
+                            type="text"
+                            placeholder="Jobs Title"
+                            required
+                        />
                     </div>
-                </div>
 
-                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Company
                         </label>
-                        <input className={cx('form-control', 'company')} type="text" placeholder="Company" />
+                        <input className={cx('form-control', 'company')} type="text" placeholder="Company" required />
                     </div>
+
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Location
                         </label>
-                        <input className={cx('form-control', 'location')} type="text" placeholder="Location" />
+                        <input className={cx('form-control', 'location')} type="text" placeholder="Location" required />
                     </div>
-                </div>
 
-                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Email
                         </label>
-                        <input className={cx('form-control', 'email')} type="text" placeholder="Email" />
+                        <input className={cx('form-control', 'email')} type="text" placeholder="Email" required />
                     </div>
+
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Phone
                         </label>
-                        <input className={cx('form-control', 'phone')} type="text" placeholder="Phone Number" />
+                        <input
+                            className={cx('form-control', 'phone')}
+                            type="text"
+                            placeholder="Phone Number"
+                            required
+                        />
                     </div>
-                </div>
 
-                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Workplace Type
                         </label>
-                        <select className={cx('form-control', 'workplace-type')} name="workplace-type">
+                        <select className={cx('form-control', 'workplace-type')} name="workplace-type" required>
                             <option value="onsite" selected>
                                 Onsite
                             </option>
@@ -64,6 +70,7 @@ function PostJob() {
                             <option value="remote">Remote</option>
                         </select>
                     </div>
+
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Employment Type
@@ -75,9 +82,7 @@ function PostJob() {
                             <option value="part-time">Part-time</option>
                         </select>
                     </div>
-                </div>
 
-                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Experience Level
@@ -91,6 +96,7 @@ function PostJob() {
                             <option value="senior">Senior</option>
                         </select>
                     </div>
+
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Number Positions
@@ -99,11 +105,10 @@ function PostJob() {
                             className={cx('form-control', 'number-positions')}
                             type="text"
                             placeholder="Number Positions"
+                            required
                         />
                     </div>
-                </div>
 
-                <div className={cx('row')}>
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Requirements
@@ -112,8 +117,10 @@ function PostJob() {
                             className={cx('form-control', 'requirements')}
                             // cols="30"
                             rows="5"
+                            required
                         ></textarea>
                     </div>
+
                     <div className={cx('col l-6', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Benefits
@@ -122,11 +129,10 @@ function PostJob() {
                             className={cx('form-control', 'benefits')}
                             // cols="30"
                             rows="5"
+                            required
                         ></textarea>
                     </div>
-                </div>
 
-                <div className={cx('row')}>
                     <div className={cx('col l-12', 'form-group')}>
                         <label htmlFor="" className={cx('form-label')}>
                             Job Descriptions
@@ -135,6 +141,7 @@ function PostJob() {
                             className={cx('form-control', 'job-descriptions')}
                             // cols="30"
                             rows="8"
+                            required
                         ></textarea>
                     </div>
                 </div>

@@ -5,17 +5,17 @@ import styles from './Image.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Image = forwardRef(({ src, alt, className, fallback: customeFallback = images.noImage, ...props }, ref) => {
+const Image = forwardRef(({ src, alt, className, fallback: customFallback = images.noImage, ...props }, ref) => {
     const [fallback, setFallback] = useState('');
 
     const handleError = () => {
-        setFallback(customeFallback);
+        setFallback(customFallback);
     };
 
     return (
         <img
             ref={ref}
-            className={cx('wapper', className)}
+            className={cx('wrapper', className)}
             src={fallback || src}
             alt={alt}
             {...props}

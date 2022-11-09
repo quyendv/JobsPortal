@@ -6,6 +6,7 @@
     .nav-item {
         width: 82px;
         height: var(--default-layout-header-height);
+        margin: 0 5px;
         color: rgba(0, 0, 0, 0.6);
         display: inline-flex;
         flex-direction: column;
@@ -19,6 +20,11 @@
         &.nav-active {
             color: var(--black);
             border-bottom: 2px solid #000;
+        }
+
+        &.disabled {
+            pointer-events: none;
+            user-select: none;
         }
 
         .nav-icon {
