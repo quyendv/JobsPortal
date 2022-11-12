@@ -5,12 +5,12 @@ import {
     faChalkboardUser,
     faCommentDots,
     faHouseChimney,
+    faPenToSquare,
     faPeopleGroup,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { NavLink } from 'react-router-dom';
-import { HomeIcon } from '~/components/Icons';
 import routesConfig from '~/config/routes';
 import styles from './Navigation.module.scss';
 
@@ -33,6 +33,11 @@ const navLogin = [
         title: 'Jobs',
         to: routesConfig.jobs,
         icon: faBriefcase,
+    },
+    {
+        title: 'Post Job',
+        to: routesConfig.postJob,
+        icon: faPenToSquare
     },
     {
         title: 'Messaging',

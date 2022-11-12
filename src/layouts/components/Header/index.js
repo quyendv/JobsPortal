@@ -7,6 +7,7 @@ import Button from '~/components/Button';
 import Image from '~/components/Image';
 import { UserMenu } from '~/components/Popper';
 import Navigation from '~/layouts/components/Navigation';
+import Search from '../Search';
 import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
@@ -24,7 +25,7 @@ function Header() {
                 </Link>
 
                 {/* Search */}
-                {/* {currentUser ? <Search /> : <div className={cx('flex1')}></div>} */}
+                {currentUser ? <Search /> : <div className={cx('flex1')}></div>}
 
                 {/* Navigation */}
                 <Navigation isLogin={currentUser} />

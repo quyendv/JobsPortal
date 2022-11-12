@@ -40,12 +40,12 @@ $hover-outline: #0a66c2;
 
 .primary {
     color: var(--white);
-    background-color: var(--primary);
-    border-color: var(--primary);
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
 
     &:hover {
-        border-color: rgba($color: #000000, $alpha: 1.0);
-        background: rgba($color: #000000, $alpha: 1.0);
+        border-color: rgba($color: #000000, $alpha: 1);
+        background: rgba($color: #000000, $alpha: 1);
     }
 }
 

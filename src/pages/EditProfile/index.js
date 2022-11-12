@@ -14,6 +14,9 @@ function EditProfile() {
     const [avatar, setAvatar] = useState();
     const avatarRef = useRef();
 
+    // TODO: Thêm state or ref cho các input
+    // const genderRef = useRef();
+
     useEffect(() => {
         return () => {
             avatar && URL.revokeObjectURL(avatar.preview);
@@ -147,10 +150,13 @@ function EditProfile() {
                             <label htmlFor="" className={cx('form-label')}>
                                 Gender
                             </label>
-                            <select className={cx('form-control', 'gender')} name="gender" required>
-                                <option value="intern" selected>
-                                    Male
-                                </option>
+                            <select
+                                // ref={genderRef}
+                                className={cx('form-control', 'gender')}
+                                name="gender"
+                                required
+                            >
+                                <option value="intern">Male</option>
                                 <option value="fresher">Female</option>
                                 <option value="fresher">Others</option>
                             </select>

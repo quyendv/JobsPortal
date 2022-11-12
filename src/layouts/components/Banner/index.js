@@ -20,25 +20,37 @@ function Banner() {
                 spaceBetween={50}
                 slidesPerView={1}
                 autoplay={{
-                    delay: 800,
+                    delay: 1500,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}
-                speed={1000}
+                speed={800}
                 loop
             >
                 <SwiperSlide>
                     <div className={cx('banner-item', 'banner-1')}>
                         <div className={cx('content')}>
-                            <h1 className={cx('heading')}>Welcome to your professional community</h1>
+                            <h1 className={cx('heading', 'top-down transition-delay-2')}>
+                                Welcome to your <br />
+                                professional community
+                            </h1>
                             <ul className={cx('list-actions', 'w-full')}>
-                                <Button className={cx('action')} rightIcon={<FontAwesomeIcon icon={faAngleRight} />}>
+                                <Button
+                                    className={cx('action', 'to-right transition-delay-2')}
+                                    rightIcon={<FontAwesomeIcon icon={faAngleRight} />}
+                                >
                                     Search for a job
                                 </Button>
-                                <Button className={cx('action')} rightIcon={<FontAwesomeIcon icon={faAngleRight} />}>
+                                <Button
+                                    className={cx('action', 'to-right transition-delay-4')}
+                                    rightIcon={<FontAwesomeIcon icon={faAngleRight} />}
+                                >
                                     Find a person you know
                                 </Button>
-                                <Button className={cx('action')} rightIcon={<FontAwesomeIcon icon={faAngleRight} />}>
+                                <Button
+                                    className={cx('action', 'to-right transition-delay-6')}
+                                    rightIcon={<FontAwesomeIcon icon={faAngleRight} />}
+                                >
                                     Learn a new skill
                                 </Button>
                             </ul>
@@ -52,12 +64,16 @@ function Banner() {
                         style={{ background: `url(${images.banner2}) no-repeat center / cover` }}
                     >
                         <div className={cx('content')}>
-                            <h1 className={cx('heading')}>Search your job in your area</h1>
-                            <p className={cx('desc')}>
+                            <h1 className={cx('heading', 'top-down transition-delay-2')}>
+                                Search your job in your area
+                            </h1>
+                            <p className={cx('desc', 'to-right transition-delay-2')}>
                                 Each month, more than 3 million job seekers turn to website in their search for work,
                                 making over 140,000 applications every single day
                             </p>
-                            <Button className="bg-blue-600 text-2xl">Contact Us</Button>
+                            <Button className={cx('bg-blue-600 text-2xl', 'to-right transition-delay-4')}>
+                                Contact Us
+                            </Button>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -67,17 +83,17 @@ function Banner() {
                         style={{ background: `url(${images.banner3}) no-repeat center 10% / cover` }}
                     >
                         <div className={cx('content')}>
-                            <h1 className={cx('heading')}>
+                            <h1 className={cx('heading', 'top-down transition-delay-2')}>
                                 Find Your Favourite <br />
                                 <span className="text-red-500">Job Immediete</span>
                             </h1>
-                            <p className={cx('desc')}>
+                            <p className={cx('desc', 'to-right transition-delay-2')}>
                                 The <span className="text-blue-400">Easiest Way</span> to Get Your New Job
                                 <br />
                                 The <span className="text-green-500">#1 Job Board</span> for Hiring or Find Your Next
                                 Job
                             </p>
-                            <div className={cx('search-area', 'flex items-center')}>
+                            <div className={cx('search-area', 'flex items-center', 'to-right transition-delay-4')}>
                                 <FontAwesomeIcon icon={faSearch} />
                                 <input
                                     type="search"
@@ -94,11 +110,11 @@ function Banner() {
                 <SwiperSlide>
                     <div className={cx('banner-item', 'banner-4')}>
                         <div className={cx('content')}>
-                            <h1 className={cx('heading')}>
+                            <h1 className={cx('heading', 'top-down transition-delay-2')}>
                                 Get The <span className="text-blue-600">Right Job</span> <br />
                                 You Deserve
                             </h1>
-                            <p className={cx('desc')}>
+                            <p className={cx('desc', 'to-right transition-delay-2')}>
                                 Find Jobs, Hire Creatives
                                 <br />
                                 There Are <span className="text-green-400">102,256</span> Postings Here For you!

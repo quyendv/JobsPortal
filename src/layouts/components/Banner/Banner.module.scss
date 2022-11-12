@@ -1,3 +1,5 @@
+@import './CustomSwiper.scss'; // not @import url(...): https://stackoverflow.com/questions/7111610/import-regular-css-file-in-scss-file
+
 .banner {
     width: 100%;
     background-color: #fff;
@@ -11,8 +13,6 @@
 .banner-1 {
     max-width: var(--default-layout-width);
     padding-top: 40px;
-    // height: 600px;
-    // margin: auto;
     display: flex;
     .content {
         padding-right: 42px;
@@ -119,14 +119,5 @@
         top: 50%;
         transform: translateY(-50%);
         animation: move-y-infinite 1s linear infinite alternate-reverse;
-    }
-}
-
-@keyframes move-y-infinite {
-    from {
-        top: 45%;
-    }
-    to {
-        top: 55%;
     }
 }
