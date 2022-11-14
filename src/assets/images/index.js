@@ -11,6 +11,10 @@ const images = {
     banner2: require('~/assets/images/banner/banner2.jpg'),
     banner3: require('~/assets/images/banner/banner3.png'),
     banner4: require('~/assets/images/banner/banner4.png'),
+    section1: require('~/assets/images/sections/section1.svg').default,
+    section2: require('~/assets/images/sections/section2.svg').default,
+    education: require('~/assets/images/profile/education.jfif'),
+    company: require('~/assets/images/profile/company.jfif'),
 };
 
 export default images;

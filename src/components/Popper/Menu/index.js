@@ -9,7 +9,7 @@ import styles from './Menu.module.scss';
 const cx = classNames.bind(styles);
 
 // User-Menu (User-Popper)
-function Menu({ children }) {
+function Menu({ children, setLogout = () => {} }) {
     return (
         <HeadlessTippy
             trigger="click"
@@ -58,7 +58,9 @@ function Menu({ children }) {
                             </Link>
                         </div>
                         <div className={cx('sign-out', 'info-list')}>
-                            <Button className={cx('sign-out-btn', 'info-item')}>Sign out</Button>
+                            <Button className={cx('sign-out-btn', 'info-item', 'hover:bg-gray-200')} onClick={setLogout}>
+                                Sign out
+                            </Button>
                         </div>
                     </PopperWrapper>
                 </div>

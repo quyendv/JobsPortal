@@ -1,0 +1,30 @@
+.wrapper {
+    // min-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.content {
+    table {
+        border: 1px solid #ccc;
+    }
+
+    th {
+        color: var(--primary);
+        background-color: #0000ff1a;
+    }
+
+    th,
+    td {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+    }
+
+    tr {
+    }
+
+    tr:nth-of-type(even) {
+        background-color: #bbc0be6f;
+    }
+}

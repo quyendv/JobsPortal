@@ -1,6 +1,7 @@
 // Layouts
 import routesConfig from '~/config/routes';
 import { OnlyBodyLayout, ProfileLayout } from '~/layouts';
+import { ApprovePost, ApprovePostDetails } from '~/pages/Admin';
 import EditProfile from '~/pages/EditProfile';
 
 // Pages
@@ -44,6 +45,16 @@ const publicRoutes = [
     {
         path: routesConfig.edit,
         component: EditProfile,
+    },
+    {
+        path: routesConfig.adminApprovePost,
+        component: ApprovePost,
+        layout: OnlyBodyLayout,
+    },
+    {
+        path: routesConfig.adminApprovePostDetails,
+        component: ApprovePostDetails,
+        layout: OnlyBodyLayout,
     },
 ];
 

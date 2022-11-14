@@ -11,7 +11,10 @@ const routes = {
     discovery: '/discover',
     people: '/people',
     learning: '/learning',
+    logout: '/logout',
     edit: '/edit',
+    adminApprovePost: '/admin/approve',
+    adminApprovePostDetails: '/admin/approve/details/:id',
 };
 
 export default routes;

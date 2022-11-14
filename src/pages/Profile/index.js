@@ -34,6 +34,7 @@ function Profile() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('container')}>
+                {/* Edit Btn */}
                 <Button
                     className={cx('edit-profile', 'hover:underline')}
                     to="/edit"
@@ -41,6 +42,8 @@ function Profile() {
                 >
                     Edit Profile
                 </Button>
+
+                {/* General Info */}
                 <div className={cx('info', 'general-info')}>
                     <div className={cx('background')}></div>
                     <Image
@@ -72,8 +75,10 @@ function Profile() {
                                     <FontAwesomeIcon icon={faSquareGithub} />
                                 </div>
                             </div>
+
+                            {/* Contact */}
                             <div className="col l-6">
-                                <h3 className="mb-4 text-2xl font-semibold text-blue-600 align-middle">Contact</h3>
+                                <h3 className="mb-4 text-2xl font-semibold  align-middle">Contact</h3>
                                 <div className={cx('phone')}>
                                     <FontAwesomeIcon icon={faPhone} className={cx('icon')} />
                                     <span>(+84) 0xxx xxx xxx</span>
@@ -90,40 +95,83 @@ function Profile() {
                         </div>
                     </div>
                 </div>
+
+                {/* Education */}
                 <div className={cx('info', 'education')}>
                     <h3 className={cx('title')}>
                         <FontAwesomeIcon icon={faGraduationCap} className={cx('icon')} />
                         <span className={cx('text')}>Education</span>
                     </h3>
-                    <p className={cx('info-item')}>Vietnam National University, Hanoi</p>
+                    <div className={cx('info-item')}>
+                        <img src={images.education} alt="university" className="w-12 object-cover mr-4" />
+                        <div className="text-base font-semibold">
+                            VNU University of Engineering and Technology
+                            <br />
+                            <span className="text-sm font-normal">
+                                Bachelor's degree, Computer Science
+                                <br />
+                                2020 - 2024
+                            </span>
+                        </div>
+                    </div>
                 </div>
+
+                {/* Company */}
                 <div className={cx('info', 'current-company')}>
                     <h3 className={cx('title')}>
                         <FontAwesomeIcon icon={faBuilding} className={cx('icon')} />
                         <span className={cx('text')}>Company</span>
                     </h3>
-                    <p className={cx('info-item')}>Sample company</p>
+                    <p className={cx('info-item')}>
+                        <img src={images.company} alt="university" className="w-12 object-cover mr-4" />
+                        <div className="text-base font-semibold">
+                            VNPT IT
+                            <br />
+                            <span className="text-sm font-normal">
+                                IT Services and IT Consulting
+                                <br />
+                                Ha Noi
+                            </span>
+                        </div>
+                    </p>
                 </div>
+
+                {/* Skills */}
                 <div className={cx('info', 'skills')}>
-                    <h3 className={cx('title')}>
+                    <h3 className={cx('title', 'mb-6')}>
                         <FontAwesomeIcon icon={faCutlery} className={cx('icon')} />
                         <span className={cx('text')}>Skills</span>
                     </h3>
-                    <p className={cx('info-item')}>MySQL</p>
-                    <p className={cx('info-item')}>OOP</p>
-                    <p className={cx('info-item')}>DSA</p>
-                    <p className={cx('info-item')}>...</p>
+                    <li className='pl-3 font-medium text-lg'>OOP</li>
+                    <li className='pl-3 font-medium text-lg'>DSA</li>
+                    <li className='pl-3 font-medium text-lg'>Core Java</li>
+                    <li className='pl-3 font-medium text-lg'>MySQL, MongoDB</li>
+                    <li className='pl-3 font-medium text-lg'>ReactJS, NodeJS</li>
+                    <li className='pl-3 font-medium text-lg'>Bootstrap, TailwindCSS</li>
                 </div>
+
+                {/* Description */}
                 <div className={cx('info', 'description')}>
                     <h3 className={cx('title')}>
                         <FontAwesomeIcon icon={faTableList} className={cx('icon')} />
                         <span className={cx('text')}>Description</span>
                     </h3>
-                    <p className={cx('info-item')}>Text .................................</p>
+                    <p className={cx('info-item', 'indent-8 text-justify text-base text-gray-600')}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque massa vel lorem
+                        fermentum fringilla. Pellentesque id est et neque blandit ornare malesuada a mauris. Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit. Sed sagittis, quam a fringilla congue, turpis
+                        turpis molestie ligula, ut laoreet elit arcu sed nulla. Sed at quam commodo, egestas turpis
+                        eget, fringilla dui. Etiam sit amet nulla metus. Etiam iaculis lobortis ultricies. Maecenas
+                        maximus magna a metus consectetur, vel fermentum nisl ultrices. Quisque eget ante id dui posuere
+                        ullamcorper ut molestie eros. Aliquam ultrices lacinia risus, at lacinia ante vehicula id. Nulla
+                        in lectus dignissim, egestas purus sit amet, mattis libero. Maecenas ullamcorper rutrum porta.
+                    </p>
                 </div>
             </div>
 
+            {/* RightSide */}
             <div className={cx('right-side')}>
+                {/* Actions */}
                 <div className={cx('actions-group')}>
                     <Link to="">
                         <span>Edit public profile & URL</span>
@@ -136,8 +184,10 @@ function Profile() {
                     </Link>
                 </div>
 
+                {/* Separate */}
                 <div className={cx('spacer-horizontal')}></div>
 
+                {/* Suggestion */}
                 <div className={cx('people-suggest')}>
                     <h4>People you may know</h4>
                     <People />
@@ -147,6 +197,7 @@ function Profile() {
                     </Link>
                 </div>
 
+                {/* Learning */}
                 <div className={cx('learning')}>
                     <div className={cx('learning-header')}>
                         <img src={images.favicon} alt="" className={cx('logo-right-side')} />

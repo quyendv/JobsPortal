@@ -1,3 +1,47 @@
 .wrapper {
     width: 100%;
+    background-color: white;
+}
+
+.section {
+    padding: 100px 32px 32px 32px;
+    &:nth-of-type(odd) {
+        background-color: #e2e5e83d;
+    }
+}
+
+.section1 {
+    .our-job {
+        padding: 30px 15px 70px;
+    }
+}
+
+.section2 {
+    .inner {
+        display: flex;
+        align-items: center;
+        width: var(--default-layout-width);
+        margin: auto;
+        gap: 32px;
+    }
+}
+
+.section3 {
+    padding-bottom: 80px;
+    .inner {
+        max-width: var(--default-layout-width);
+        padding: 0 15px;
+        margin: auto;
+    }
+}
+
+.section4 {
+    background: url('https://www.sharjeelanjum.com/html/jobs-portal/demo/images/app-bg.jpg') no-repeat top / cover;
+    background-attachment: fixed;
+    padding-bottom: 80px;
+    .inner {
+        max-width: var(--default-layout-width);
+        padding: 0 15px;
+        margin: auto;
+    }
 }

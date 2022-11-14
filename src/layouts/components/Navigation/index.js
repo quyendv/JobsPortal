@@ -5,6 +5,7 @@ import {
     faChalkboardUser,
     faCommentDots,
     faHouseChimney,
+    faListCheck,
     faPenToSquare,
     faPeopleGroup,
 } from '@fortawesome/free-solid-svg-icons';
@@ -17,7 +18,43 @@ import styles from './Navigation.module.scss';
 const cx = classNames.bind(styles);
 
 // TODO: Thêm disabled, sửa notification sau
-const navLogin = [
+const navCandidate = [
+    {
+        title: 'Home',
+        to: routesConfig.home,
+        icon: faHouseChimney,
+    },
+    {
+        title: 'My Network',
+        to: routesConfig.myNetwork,
+        icon: faPeopleGroup,
+        disabled: true,
+    },
+    {
+        title: 'Jobs',
+        to: routesConfig.jobs,
+        icon: faBriefcase,
+    },
+    // {
+    //     title: 'Post Job',
+    //     to: routesConfig.postJob,
+    //     icon: faPenToSquare
+    // },
+    {
+        title: 'Messaging',
+        to: routesConfig.message,
+        icon: faCommentDots,
+        disabled: true,
+    },
+    {
+        title: 'Notifications',
+        to: routesConfig.notifications,
+        icon: faBell,
+        disabled: true,
+    },
+];
+
+const navEmployer = [
     {
         title: 'Home',
         to: routesConfig.home,
@@ -37,7 +74,48 @@ const navLogin = [
     {
         title: 'Post Job',
         to: routesConfig.postJob,
-        icon: faPenToSquare
+        icon: faPenToSquare,
+    },
+    {
+        title: 'Messaging',
+        to: routesConfig.message,
+        icon: faCommentDots,
+        disabled: true,
+    },
+    {
+        title: 'Notifications',
+        to: routesConfig.notifications,
+        icon: faBell,
+        disabled: true,
+    },
+];
+
+const navAdmin = [
+    {
+        title: 'Home',
+        to: routesConfig.home,
+        icon: faHouseChimney,
+    },
+    {
+        title: 'My Network',
+        to: routesConfig.myNetwork,
+        icon: faPeopleGroup,
+        disabled: true,
+    },
+    {
+        title: 'Jobs',
+        to: routesConfig.jobs,
+        icon: faBriefcase,
+    },
+    {
+        title: 'Post Job',
+        to: routesConfig.postJob,
+        icon: faPenToSquare,
+    },
+    {
+        title: 'Pending Post',
+        to: routesConfig.adminApprovePost,
+        icon: faListCheck,
     },
     {
         title: 'Messaging',
@@ -79,8 +157,17 @@ const navGuest = [
     },
 ];
 
-function Navigation({ isLogin = false }) {
-    const navList = isLogin ? navLogin : navGuest;
+function Navigation({ currentUser }) {
+    let navList;
+    if (!currentUser.isLogin) {
+        navList = navGuest;
+    } else if (currentUser.type === 'admin') {
+        navList = navAdmin;
+    } else if (currentUser.type === 'employer') {
+        navList = navEmployer;
+    } else if (currentUser.type === 'candidate') {
+        navList = navCandidate;
+    }
 
     return (
         <div className={cx('nav-list')}>

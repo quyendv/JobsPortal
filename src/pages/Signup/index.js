@@ -6,7 +6,6 @@ import styles from './Signup.module.scss';
 
 const cx = classNames.bind(styles);
 
-
 function Signup() {
     const [formType, setFormType] = useState('candidate');
     const activeBtnRef = useRef();
@@ -56,16 +55,43 @@ function Signup() {
                 <div className={cx('form-box')} ref={formBoxRef}>
                     <form className={cx('form', 'candidate-form')} action="">
                         <div className={cx('form-group')}>
-                            <input type="text" className={cx('form-control')} placeholder="&nbsp;" name="full-name" />
-                            <label className={cx('form-label')}>Full Name</label>
+                            <input
+                                type="text"
+                                className={cx('form-control')}
+                                placeholder="&nbsp;"
+                                name="full-name"
+                                id="candidate-full-name"
+                                required
+                            />
+                            <label htmlFor="candidate-full-name" className={cx('form-label')}>
+                                Full Name
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
-                            <input type="text" className={cx('form-control')} placeholder="&nbsp;" name="user-name" />
-                            <label className={cx('form-label')}>Username</label>
+                            <input
+                                type="text"
+                                className={cx('form-control')}
+                                placeholder="&nbsp;"
+                                name="user-name"
+                                id="candidate-username"
+                                required
+                            />
+                            <label htmlFor="candidate-username" className={cx('form-label')}>
+                                Username
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
-                            <input type="email" className={cx('form-control')} placeholder="&nbsp;" name="email" />
-                            <label className={cx('form-label')}>Email</label>
+                            <input
+                                type="email"
+                                className={cx('form-control')}
+                                placeholder="&nbsp;"
+                                name="email"
+                                id="candidate-email"
+                                required
+                            />
+                            <label htmlFor="candidate-email" className={cx('form-label')}>
+                                Email
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
                             <input
@@ -73,8 +99,12 @@ function Signup() {
                                 className={cx('form-control')}
                                 placeholder="&nbsp;"
                                 name="password"
+                                id="candidate-password"
+                                required
                             />
-                            <label className={cx('form-label')}>Password</label>
+                            <label htmlFor="candidate-password" className={cx('form-label')}>
+                                Password
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
                             <input
@@ -82,8 +112,12 @@ function Signup() {
                                 className={cx('form-control')}
                                 placeholder="&nbsp;"
                                 name="confirm-password"
+                                id="candidate-confirm-password"
+                                required
                             />
-                            <label className={cx('form-label')}>Confirm Password</label>
+                            <label htmlFor="candidate-confirm-password" className={cx('form-label')}>
+                                Confirm Password
+                            </label>
                         </div>
                         <p className={cx('agreement')}>
                             By clicking Agree & Join, you agree to the JobsPortal <span>User Agreement</span>,{' '}
@@ -101,16 +135,38 @@ function Signup() {
                                 className={cx('form-control')}
                                 placeholder="&nbsp;"
                                 name="company-name"
+                                id="employer-company-name"
+                                required
                             />
-                            <label className={cx('form-label')}>Company Name</label>
+                            <label htmlFor="employer-company-name" className={cx('form-label')}>
+                                Company Name
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
-                            <input type="text" className={cx('form-control')} placeholder="&nbsp;" name="user-name" />
-                            <label className={cx('form-label')}>Username</label>
+                            <input
+                                type="text"
+                                className={cx('form-control')}
+                                placeholder="&nbsp;"
+                                name="user-name"
+                                id="employer-username"
+                                required
+                            />
+                            <label htmlFor="employer-username" className={cx('form-label')}>
+                                Username
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
-                            <input type="email" className={cx('form-control')} placeholder="&nbsp;" name="email" />
-                            <label className={cx('form-label')}>Email</label>
+                            <input
+                                type="email"
+                                className={cx('form-control')}
+                                placeholder="&nbsp;"
+                                name="email"
+                                id="employer-email"
+                                required
+                            />
+                            <label htmlFor="employer-email" className={cx('form-label')}>
+                                Email
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
                             <input
@@ -118,8 +174,12 @@ function Signup() {
                                 className={cx('form-control')}
                                 placeholder="&nbsp;"
                                 name="password"
+                                id="employer-password"
+                                required
                             />
-                            <label className={cx('form-label')}>Password</label>
+                            <label htmlFor="employer-password" className={cx('form-label')}>
+                                Password
+                            </label>
                         </div>
                         <div className={cx('form-group')}>
                             <input
@@ -127,8 +187,12 @@ function Signup() {
                                 className={cx('form-control')}
                                 placeholder="&nbsp;"
                                 name="confirm-password"
+                                id="employer-confirm-password"
+                                required
                             />
-                            <label className={cx('form-label')}>Confirm Password</label>
+                            <label htmlFor="employer-confirm-password" className={cx('form-label')}>
+                                Confirm Password
+                            </label>
                         </div>
                         <p className={cx('agreement')}>
                             By clicking Agree & Join, you agree to the JobsPortal <span>User Agreement</span>,{' '}

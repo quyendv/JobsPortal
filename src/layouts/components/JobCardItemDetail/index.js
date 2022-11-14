@@ -5,7 +5,7 @@ import styles from './JobCardItem.module.scss';
 
 const cx = classNames.bind(styles);
 
-function JobCardItemDetail() {
+function JobCardItemDetail({ isAdmin = false }) {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('header')}>
@@ -22,7 +22,7 @@ function JobCardItemDetail() {
                 <ul className={cx('detail-info')}>
                     <li>
                         <JobIcon />
-                        <span>Internship · Internship</span>
+                        <span>Internship · Part-time</span>
                     </li>
                     <li>
                         <CompanyIcon />
@@ -40,10 +40,10 @@ function JobCardItemDetail() {
 
                 <div className={cx('btns')}>
                     <Button primary rounded>
-                        Apply
+                        {isAdmin ? 'Approve' : 'Apply'}
                     </Button>
                     <Button outline rounded>
-                        Save
+                        {isAdmin ? 'Cancel' : 'Save'}
                     </Button>
                 </div>
             </div>

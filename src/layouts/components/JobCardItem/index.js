@@ -6,7 +6,7 @@ import styles from './JobCardItem.module.scss';
 
 const cx = classNames.bind(styles);
 
-function JobCardItem({ active = false }) {
+function JobCardItem({ active = false, className }) {
     return (
         <div className={cx('job-card-item', { active: active })}>
             <div className={cx('job-card-item-header')}>

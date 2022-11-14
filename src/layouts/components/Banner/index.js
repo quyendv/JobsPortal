@@ -20,7 +20,7 @@ function Banner() {
                 spaceBetween={50}
                 slidesPerView={1}
                 autoplay={{
-                    delay: 1500,
+                    delay: 1800,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 }}

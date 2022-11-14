@@ -14,9 +14,6 @@ function EditProfile() {
     const [avatar, setAvatar] = useState();
     const avatarRef = useRef();
 
-    // TODO: Thêm state or ref cho các input
-    // const genderRef = useRef();
-
     useEffect(() => {
         return () => {
             avatar && URL.revokeObjectURL(avatar.preview);

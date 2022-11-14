@@ -1,40 +1,52 @@
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import images from '~/assets/images';
 import Button from '~/components/Button';
 import Image from '~/components/Image';
 import { UserMenu } from '~/components/Popper';
+import routesConfig from '~/config/routes';
+import { AuthenticationContext } from '~/contexts';
 import Navigation from '~/layouts/components/Navigation';
 import Search from '../Search';
 import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
+// TODO: global state for user{type: 'candidate'/'employer'/'admin'}
 function Header() {
-    const currentUser = false; // isLogin, sau sửa thành object lưu thông tin người dùng
+    // const currentUser = false; // isLogin // TODO: user
+    const [currentUser, setCurrentUser] = useContext(AuthenticationContext);
+    console.log(currentUser);
+    const navigate = useNavigate();
 
     return (
-        <div className={cx('wrapper', { guest: currentUser === false })}>
+        <div className={cx('wrapper', { guest: !currentUser.isLogin })}>
             <div className={cx('inner')}>
                 {/* Logo */}
-                {/* <img className={cx('logo')} src={currentUser ? images.logo : images.logoFull} alt="Linkedin" /> */}
+                {/* <img className={cx('logo')} src={currentUser.isLogin ? images.logo : images.logoFull} alt="Linkedin" /> */}
                 <Link to="/">
                     <img className={cx('logo')} src={images.logoJobsPortal} alt="JobsPortal" />
                 </Link>
 
                 {/* Search */}
-                {currentUser ? <Search /> : <div className={cx('flex1')}></div>}
+                {currentUser.isLogin && currentUser.type !== 'admin' ? <Search /> : <div className={cx('flex1')}></div>}
 
                 {/* Navigation */}
-                <Navigation isLogin={currentUser} />
+                <Navigation currentUser={currentUser} />
 
                 {/* Actions */}
                 <div className={cx('actions')}>
-                    {currentUser ? (
+                    {currentUser.isLogin ? (
                         /* isLogin: user infor */
-                        <UserMenu>
+                        <UserMenu
+                            setLogout={() => {
+                                setCurrentUser({ isLogin: false, type: undefined });
+                                navigate(routesConfig.home);
+                            }}
+                        >
                             <div className={cx('user', 'separate-vertical-left')}>
                                 <Image
                                     className={cx('user-avatar')}

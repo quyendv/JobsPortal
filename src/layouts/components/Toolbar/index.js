@@ -20,10 +20,6 @@ const employmentType = ['Full-time', 'Part-time']; // Job Type
 // TODO: JobTitle?, Location, WorkPlace-Type (onsite/remote), employment-type(job-type: full/part), ... requirements, benefits, desc...
 
 function Toolbar() {
-    // TODO: state or ref
-    // const jobsRef = useRef();
-    // const datePostedRef = useRef();
-
     return (
         <div className={cx('wrapper', 'separate-horizontal')}>
             <div className={cx('inner')}>
