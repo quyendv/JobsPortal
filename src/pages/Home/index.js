@@ -139,119 +139,11 @@ function Home() {
                         Top <span className="text-blue-500">Employers</span>
                     </h2>
                     <div className="!grid grid-cols-8 gap-8">
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo1.jpg"
-                                alt="emplogo1"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo2.jpg"
-                                alt="emplogo2"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo3.jpg"
-                                alt="emplogo3"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo4.jpg"
-                                alt="emplogo4"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo5.jpg"
-                                alt="emplogo5"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo6.jpg"
-                                alt="emplogo6"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo7.jpg"
-                                alt="emplogo7"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo8.jpg"
-                                alt="emplogo8"
-                            />
-                        </li>
-                        {/* row 2 */}
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo9.jpg"
-                                alt="emplogo9"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo10.jpg"
-                                alt="emplogo10"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo11.jpg"
-                                alt="emplogo11"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo12.jpg"
-                                alt="emplogo12"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo13.jpg"
-                                alt="emplogo13"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo14.jpg"
-                                alt="emplogo14"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo15.jpg"
-                                alt="emplogo15"
-                            />
-                        </li>
-                        <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
-                            <img
-                                className="w-full object-cover"
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/employers/emplogo16.jpg"
-                                alt="emplogo16"
-                            />
-                        </li>
+                        {images.companyLogos.map((logo, id) => (
+                            <li className="inline-block w-28 hover:scale-125 hover:shadow-xl cursor-pointer">
+                                <img className="w-full object-cover" src={logo} alt={`emplogo${id}`} />
+                            </li>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -262,10 +154,7 @@ function Home() {
                     <div className="row">
                         {/* App image */}
                         <div className="col l-5">
-                            <img
-                                src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/app-mobile.png"
-                                alt="appImage"
-                            />
+                            <img src={images.appMobile} alt="appImage" />
                         </div>
                         {/* App info */}
                         <div className="col l-7 text-white">
@@ -278,16 +167,8 @@ function Home() {
                                 pellentesque dui non, semper orci. Curabitur blandit, diam ut ornare ultricies.
                             </p>
                             <div className="flex gap-14 my-8">
-                                <img
-                                    className="cursor-pointer"
-                                    src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/apple-btn.png"
-                                    alt="apple"
-                                />
-                                <img
-                                    className="cursor-pointer"
-                                    src="https://www.sharjeelanjum.com/html/jobs-portal/demo/images/andriod-btn.png"
-                                    alt="android"
-                                />
+                                <img className="cursor-pointer" src={images.appleBtn} alt="apple" />
+                                <img className="cursor-pointer" src={images.androidBtn} alt="android" />
                             </div>
                         </div>
                     </div>
